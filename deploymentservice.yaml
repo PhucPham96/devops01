@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: devops01
-          image: phucpham9xx/devops01 # Image that will be used to containers in the cluster
+          image: phucpham9xx/devops01:latest # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8081 # The port that the container is running on in the cluster
@@ -28,7 +28,7 @@ metadata: # Metadata of the resource kind we are creating
   name: devops01
 spec:
   selector:
-    app: spring-boot-k8s
+    app: devops01
   ports:
     - protocol: "TCP"
       port: 8081 # The port that the service is running on in the cluster
